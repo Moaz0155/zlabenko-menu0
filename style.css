@@ -1,189 +1,151 @@
-/* General Body & Typography */
+/* General Body Styles */
 body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f8f8f8; /* خلفية فاتحة للموقع */
     margin: 0;
-    font-family: 'Cairo', sans-serif; /* الخط الأساسي للعناوين والنصوص العادية */
-    background-color: #fcf6ed; /* لون خلفية دافئ فاتح جداً (كريمي) */
-    color: #333;
-    direction: rtl;
-    text-align: right;
+    padding: 0;
+    color: #333; /* لون نص أساسي */
     line-height: 1.6;
 }
 
-/* Header Section */
+/* Header Styles */
 .menu-header {
-    background-color: #7a3e14; /* لون بني غامق دافئ (يشبه العسل أو الكراميل) */
+    background-color: #7a3a00; /* لون بني غامق */
     color: #fff;
-    padding: 30px 20px;
+    padding: 30px 0;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    border-bottom-left-radius: 25px; /* حواف سفلية مستديرة أكثر */
-    border-bottom-right-radius: 25px;
-}
-
-.menu-header .logo img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #ffdc00; /* إطار ذهبي لامع حول الشعار */
-    margin-bottom: 15px;
-    box-shadow: 0 0 15px rgba(255, 220, 0, 0.5); /* إضاءة حول الشعار */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* ظل ناعم للـ Header */
 }
 
 .menu-header h1 {
-    font-family: 'Amiri', serif; /* خط أميري للعنوان الرئيسي */
+    font-family: 'Amiri', serif;
+    font-size: 3.5em; /* حجم أكبر للعنوان الرئيسي */
     margin-top: 10px;
-    font-size: 3.5em; /* حجم أكبر بكثير للعنوان */
-    margin-bottom: 10px;
-    color: #ffdc00; /* لون ذهبي للعنوان */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* ظل خفيف للنص */
+    margin-bottom: 5px;
+    color: #ffd700; /* ذهبي */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* ظل للنص */
 }
 
 .menu-header p {
-    font-size: 1.2em;
-    opacity: 0.95;
-    margin-bottom: 25px;
-    color: #ffe6a7; /* لون ذهبي فاتح للنص */
-}
-
-.header-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 15px;
-    margin-top: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    border: 3px solid #ffcc00; /* إطار ذهبي للصورة الرئيسية */
+    font-size: 1.3em; /* حجم أكبر للوصف */
+    margin-bottom: 20px;
 }
 
 /* Main Menu Container */
 .menu-container {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 30px;
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
 }
 
-/* Menu Section (e.g., Classic Zalabya, Special Flavors) */
-.menu-section {
-    margin-bottom: 50px;
-    padding-bottom: 30px;
-    border-bottom: 1px dashed #ffd700; /* خط فاصل متقطع بلون ذهبي */
-}
-
-.menu-section:last-child {
-    border-bottom: none;
-}
-
+/* Section Titles */
 .menu-section h2 {
-    font-family: 'Amiri', serif; /* خط أميري للعناوين الفرعية */
-    color: #a0522d; /* لون بني متوسط للعناوين الفرعية */
-    font-size: 2.5em;
-    margin-bottom: 35px;
+    font-family: 'Amiri', serif;
+    font-size: 2.8em; /* حجم أكبر لعناوين الأقسام */
+    color: #7a3a00; /* بني غامق */
     text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ffd700; /* خط ذهبي تحت العنوان */
     position: relative;
-    padding-bottom: 15px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    display: flex; /* لجعل الأيقونة والنص في سطر واحد */
+    align-items: center; /* لمحاذاة رأسية */
+    justify-content: center; /* لمحاذاة أفقية */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* ظل خفيف للنص */
 }
 
 .menu-section h2 i {
-    margin-left: 15px;
-    color: #ffcc00; /* أيقونات ذهبية */
-}
-
-/* Underline effect for section titles */
-.menu-section h2::after {
-    content: '';
-    position: absolute;
-    right: 50%;
-    transform: translateX(50%);
-    bottom: 0;
-    width: 80px;
-    height: 4px;
-    background-color: #ffcc00; /* خط سفلي ذهبي */
-    border-radius: 5px;
+    background-color: #ffd700; /* لون خلفية الدائرة ذهبي */
+    color: #7a3a00; /* لون الأيقونة بني غامق */
+    border-radius: 50%; /* لجعلها دائرية */
+    width: 60px; /* حجم الدائرة أكبر قليلاً */
+    height: 60px; /* حجم الدائرة أكبر قليلاً */
+    display: flex; /* لعرض الأيقونة في منتصف الدائرة */
+    align-items: center; /* لمحاذاة رأسية للأيقونة */
+    justify-content: center; /* لمحاذاة أفقية للأيقونة */
+    font-size: 1.5em; /* حجم الأيقونة أكبر */
+    margin: 0 15px; /* مسافة أكبر بين الأيقونة والنص */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل أوضح للدائرة */
 }
 
 /* Menu Items Grid */
 .menu-items-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 35px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* قللنا الـ min-width أكثر لتكون أصغر وأكثر */
+    gap: 20px; /* قللنا المسافات بين المربعات أكثر */
+    margin-bottom: 50px;
 }
 
 .menu-item {
-    background-color: #fff9ed; /* خلفية أفتح قليلاً لعناصر المنيو */
-    border: 1px solid #ffe0b2; /* إطار بلون فاتح جداً */
-    border-radius: 18px; /* حواف أكثر استدارة */
-    padding: 25px;
+    background-color: #fff;
+    border-radius: 12px; /* حواف دائرية أكثر */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     text-align: center;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* توزيع المحتوى بالتساوي */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 180px; /* تحديد ارتفاع أدنى للمربع لضمان اتساق الشكل */
 }
 
 .menu-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-7px); /* تأثير هوفر أكثر وضوحاً */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* ظل أوضح عند الهوفر */
 }
 
-.menu-item img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #ffa000; /* إطار برتقالي/ذهبي حول الصورة */
-    margin-bottom: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
+/* Menu Item Text */
 .menu-item h3 {
-    font-family: 'Amiri', serif; /* خط أميري لأسماء الأصناف */
-    color: #5a2e0a; /* لون بني غامق لأسماء الأصناف */
-    font-size: 1.8em;
-    margin-top: 0;
-    margin-bottom: 12px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 1.8em; /* حجم الخط مناسب للعنوان */
+    color: #7a3a00; /* بني غامق */
+    margin-top: 10px; /* تقليل المسافة العلوية */
+    margin-bottom: 8px; /* تقليل المسافة السفلية */
+    font-weight: 700; /* جعل العنوان أكثر سمكاً */
 }
 
 .menu-item p {
-    font-size: 1.05em;
+    font-size: 0.9em; /* حجم الخط أصغر قليلاً للوصف */
     color: #555;
-    margin-bottom: 20px;
-    min-height: 70px; /* لضمان ارتفاع متساوٍ للأوصاف */
+    margin-bottom: 15px;
+    flex-grow: 1; /* Makes sure description takes available space */
+    line-height: 1.5; /* تحسين قراءة الوصف */
 }
 
 .menu-item .price {
-    display: block;
-    font-size: 2em; /* حجم أكبر للسعر */
+    font-family: 'Amiri', serif;
+    font-size: 1.9em; /* حجم الخط أكبر للسعر */
+    color: #ffd700; /* ذهبي */
     font-weight: bold;
-    color: #e84c3d; /* لون أحمر زاهي ومغري للسعر */
-    margin-top: 20px;
-    background-color: #ffe0b2; /* خلفية فاتحة للسعر */
-    padding: 10px 20px;
-    border-radius: 25px;
+    background-color: #7a3a00;
+    padding: 10px 20px; /* تكبير البادنج */
+    border-radius: 25px; /* حواف دائرية أكثر */
     display: inline-block;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* ظل للسعر */
 }
 
-/* Footer */
+/* Footer Styles */
 .menu-footer {
-    background-color: #4a270d; /* لون بني غامق جداً للفوتر */
-    color: white;
+    background-color: #333;
+    color: #fff;
     text-align: center;
-    padding: 25px;
-    margin-top: 50px;
-    font-size: 1em;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    padding: 25px 0;
+    font-size: 0.9em;
+    margin-top: 50px; /* مسافة علوية للفوتر */
 }
 
 .menu-footer p {
-    margin: 8px 0;
+    margin: 5px 0;
 }
 
 .menu-footer a {
-    color: #ffdc00; /* روابط ذهبية في الفوتر */
+    color: #ffd700; /* ذهبي */
     text-decoration: none;
+    margin: 0 8px; /* مسافة أكبر للروابط */
     transition: color 0.3s ease;
 }
 
@@ -191,48 +153,35 @@ body {
     color: #fff;
 }
 
-.menu-footer .fab {
-    font-size: 1.3em;
-    margin: 0 8px;
-}
-
-
-/* Responsive adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
     .menu-header h1 {
         font-size: 2.8em;
     }
-
     .menu-header p {
-        font-size: 1em;
+        font-size: 1.1em;
     }
-
-    .menu-container {
-        margin: 20px auto;
-        padding: 20px;
-    }
-
     .menu-section h2 {
-        font-size: 2em;
+        font-size: 2.2em;
     }
-
+    .menu-section h2 i {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2em;
+    }
     .menu-items-grid {
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 25px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* ضبط حجم المربعات على الشاشات الأصغر */
+        gap: 15px;
     }
-
-    .menu-item img {
-        width: 140px;
-        height: 140px;
-    }
-
     .menu-item h3 {
-        font-size: 1.5em;
+        font-size: 1.6em;
     }
-
+    .menu-item p {
+        font-size: 0.85em;
+    }
     .menu-item .price {
-        font-size: 1.8em;
-        padding: 8px 15px;
+        font-size: 1.6em;
+        padding: 8px 18px;
     }
 }
 
@@ -240,17 +189,300 @@ body {
     .menu-header h1 {
         font-size: 2.2em;
     }
-
+    .menu-header p {
+        font-size: 0.9em;
+    }
+    .menu-section h2 {
+        font-size: 1.8em;
+        flex-direction: column; /* الأيقونة والنص فوق بعض على شاشات صغيرة جداً */
+        align-items: center;
+    }
+    .menu-section h2 i {
+        margin-bottom: 10px; /* مسافة بين الأيقونة والنص لما يكونوا فوق بعض */
+        margin-right: 0;
+        margin-left: 0;
+    }
     .menu-items-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* عمود واحد على الشاشات الصغيرة جداً */
+        gap: 20px;
     }
-
     .menu-item {
-        padding: 20px;
+        padding: 15px;
     }
+    .menu-item h3 {
+        font-size: 1.5em;
+    }
+    .menu-item .price {
+        font-size: 1.5em;
+    }
+}
+/* أضف هذا الكود الجديد في نهاية ملف style.css أو في قسم الـ Header */
+.menu-header .eng-name {
+    font-size: 1em; /* حجم الخط */
+    color: #ffcc66; /* لون أفتح قليلاً من الذهب */
+    margin-top: -10px; /* لتقليل المسافة بينه وبين الجملة اللي فوقه */
+    font-weight: 300; /* خط أرق قليلاً */
+}
 
-    .menu-item img {
-        width: 120px;
-        height: 120px;
+/* قم بتحديث الجزء الخاص بـ .menu-header p في ملف style.css ليصبح هكذا: */
+.menu-header p {
+    font-size: 1.3em; /* حجم أكبر للوصف */
+    margin-bottom: 5px; /* تقليل المسافة لترك مساحة للسطر الجديد */
+}
+/* General Body Styles */
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f8f8f8; /* خلفية فاتحة للموقع */
+    margin: 0;
+    padding: 0;
+    color: #333; /* لون نص أساسي */
+    line-height: 1.6;
+}
+
+/* Header Styles */
+.menu-header {
+    background-color: #7a3a00; /* لون بني غامق */
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* ظل ناعم للـ Header */
+}
+
+.menu-header h1 {
+    font-family: 'Amiri', serif;
+    font-size: 3.5em; /* حجم أكبر للعنوان الرئيسي */
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #ffd700; /* ذهبي */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* ظل للنص */
+}
+
+.menu-header p {
+    font-size: 1.3em; /* حجم أكبر للوصف */
+    margin-bottom: 5px; /* تقليل المسافة لترك مساحة للسطر الجديد */
+}
+
+.menu-header .eng-name {
+    font-size: 1em; /* حجم الخط */
+    color: #ffcc66; /* لون أفتح قليلاً من الذهب */
+    margin-top: -10px; /* لتقليل المسافة بينه وبين الجملة اللي فوقه */
+    font-weight: 300; /* خط أرق قليلاً */
+}
+
+/* Main Menu Container */
+.menu-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Section Titles */
+.menu-section h2 {
+    font-family: 'Amiri', serif;
+    font-size: 2.8em; /* حجم أكبر لعناوين الأقسام */
+    color: #7a3a00; /* بني غامق */
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ffd700; /* خط ذهبي تحت العنوان */
+    position: relative;
+    display: flex; /* لجعل الأيقونة والنص في سطر واحد */
+    align-items: center; /* لمحاذاة رأسية */
+    justify-content: center; /* لمحاذاة أفقية */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* ظل خفيف للنص */
+}
+
+.menu-section h2 i {
+    background-color: #ffd700; /* لون خلفية الدائرة ذهبي */
+    color: #7a3a00; /* لون الأيقونة بني غامق */
+    border-radius: 50%; /* لجعلها دائرية */
+    width: 60px; /* حجم الدائرة أكبر قليلاً */
+    height: 60px; /* حجم الدائرة أكبر قليلاً */
+    display: flex; /* لعرض الأيقونة في منتصف الدائرة */
+    align-items: center; /* لمحاذاة رأسية للأيقونة */
+    justify-content: center; /* لمحاذاة أفقية للأيقونة */
+    font-size: 1.5em; /* حجم الأيقونة أكبر */
+    margin: 0 15px; /* مسافة أكبر بين الأيقونة والنص */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل أوضح للدائرة */
+}
+
+/* Menu Items Grid */
+.menu-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* قللنا الـ min-width أكثر لتكون أصغر وأكثر */
+    gap: 20px; /* قللنا المسافات بين المربعات أكثر */
+    margin-bottom: 50px;
+}
+
+.menu-item {
+    background-color: #fff;
+    border-radius: 12px; /* حواف دائرية أكثر */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* ممكن تقللها لو حبيت، مثلا 15px */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* توزيع المحتوى بالتساوي */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* إضافة تحسين للظل عند الهوفر */
+    min-height: 180px; /* تحديد ارتفاع أدنى للمربع لضمان اتساق الشكل */
+}
+
+.menu-item:hover {
+    transform: translateY(-7px); /* تأثير هوفر أكثر وضوحاً */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* ظل أوضح عند الهوفر */
+}
+
+/* Menu Item Text */
+.menu-item h3 {
+    font-family: 'Cairo', sans-serif;
+    font-size: 1.8em; /* حجم الخط مناسب للعنوان */
+    color: #7a3a00; /* بني غامق */
+    margin-top: 10px; /* تقليل المسافة العلوية */
+    margin-bottom: 8px; /* تقليل المسافة السفلية */
+    font-weight: 700; /* جعل العنوان أكثر سمكاً */
+}
+
+.menu-item p {
+    font-size: 0.9em; /* حجم الخط أصغر قليلاً للوصف */
+    color: #555;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Makes sure description takes available space */
+    line-height: 1.5; /* تحسين قراءة الوصف */
+}
+
+.menu-item .price {
+    font-family: 'Amiri', serif;
+    font-size: 1.9em; /* حجم الخط أكبر للسعر */
+    color: #ffd700; /* ذهبي */
+    font-weight: bold;
+    background-color: #7a3a00;
+    padding: 10px 20px; /* تكبير البادنج */
+    border-radius: 25px; /* حواف دائرية أكثر */
+    display: inline-block;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* ظل للسعر */
+}
+
+/* Footer Styles */
+.menu-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 0.9em;
+    margin-top: 50px; /* مسافة علوية للفوتر */
+}
+
+.menu-footer p {
+    margin: 5px 0;
+}
+
+.menu-footer a {
+    color: #ffd700; /* ذهبي */
+    text-decoration: none;
+    margin: 0 8px; /* مسافة أكبر للروابط */
+    transition: color 0.3s ease;
+}
+
+.menu-footer a:hover {
+    color: #fff;
+}
+
+/* New style for the contact line in footer */
+.menu-footer .contact-us {
+    margin-top: 15px; /* مسافة من الأسطر اللي فوقها */
+    font-size: 1em; /* حجم الخط */
+    color: #eee; /* لون فاتح قليلاً */
+}
+
+.menu-footer .contact-us .whatsapp-link {
+    color: #25D366; /* لون واتساب الأخضر */
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-flex; /* لجعل الأيقونة والنص في سطر واحد */
+    align-items: center; /* لمحاذاة رأسية */
+    margin-right: 5px; /* مسافة من النص اللي قبله */
+}
+
+.menu-footer .contact-us .whatsapp-link i {
+    font-size: 1.2em; /* حجم أيقونة الواتساب */
+    margin-left: 5px; /* مسافة بين الأيقونة والرقم */
+}
+
+.menu-footer .contact-us .whatsapp-link:hover {
+    color: #1DA751; /* لون أغمق عند الهوفر */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-header h1 {
+        font-size: 2.8em;
+    }
+    .menu-header p {
+        font-size: 1.1em;
+    }
+    .menu-section h2 {
+        font-size: 2.2em;
+    }
+    .menu-section h2 i {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2em;
+    }
+    .menu-items-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* ضبط حجم المربعات على الشاشات الأصغر */
+        gap: 15px;
+    }
+    .menu-item h3 {
+        font-size: 1.6em;
+    }
+    .menu-item p {
+        font-size: 0.85em;
+    }
+    .menu-item .price {
+        font-size: 1.6em;
+        padding: 8px 18px;
+    }
+    .menu-footer .contact-us {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-header h1 {
+        font-size: 2.2em;
+    }
+    .menu-header p {
+        font-size: 0.9em;
+    }
+    .menu-section h2 {
+        font-size: 1.8em;
+        flex-direction: column; /* الأيقونة والنص فوق بعض على شاشات صغيرة جداً */
+        align-items: center;
+    }
+    .menu-section h2 i {
+        margin-bottom: 10px; /* مسافة بين الأيقونة والنص لما يكونوا فوق بعض */
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .menu-items-grid {
+        grid-template-columns: 1fr; /* عمود واحد على الشاشات الصغيرة جداً */
+        gap: 20px;
+    }
+    .menu-item {
+        padding: 15px;
+    }
+    .menu-item h3 {
+        font-size: 1.5em;
+    }
+    .menu-item .price {
+        font-size: 1.5em;
+    }
+    .menu-footer .contact-us {
+        font-size: 0.85em;
     }
 }
