@@ -1,0 +1,256 @@
+/* General Body & Typography */
+body {
+    margin: 0;
+    font-family: 'Cairo', sans-serif; /* الخط الأساسي للعناوين والنصوص العادية */
+    background-color: #fcf6ed; /* لون خلفية دافئ فاتح جداً (كريمي) */
+    color: #333;
+    direction: rtl;
+    text-align: right;
+    line-height: 1.6;
+}
+
+/* Header Section */
+.menu-header {
+    background-color: #7a3e14; /* لون بني غامق دافئ (يشبه العسل أو الكراميل) */
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-bottom-left-radius: 25px; /* حواف سفلية مستديرة أكثر */
+    border-bottom-right-radius: 25px;
+}
+
+.menu-header .logo img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ffdc00; /* إطار ذهبي لامع حول الشعار */
+    margin-bottom: 15px;
+    box-shadow: 0 0 15px rgba(255, 220, 0, 0.5); /* إضاءة حول الشعار */
+}
+
+.menu-header h1 {
+    font-family: 'Amiri', serif; /* خط أميري للعنوان الرئيسي */
+    margin-top: 10px;
+    font-size: 3.5em; /* حجم أكبر بكثير للعنوان */
+    margin-bottom: 10px;
+    color: #ffdc00; /* لون ذهبي للعنوان */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* ظل خفيف للنص */
+}
+
+.menu-header p {
+    font-size: 1.2em;
+    opacity: 0.95;
+    margin-bottom: 25px;
+    color: #ffe6a7; /* لون ذهبي فاتح للنص */
+}
+
+.header-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 3px solid #ffcc00; /* إطار ذهبي للصورة الرئيسية */
+}
+
+/* Main Menu Container */
+.menu-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu Section (e.g., Classic Zalabya, Special Flavors) */
+.menu-section {
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed #ffd700; /* خط فاصل متقطع بلون ذهبي */
+}
+
+.menu-section:last-child {
+    border-bottom: none;
+}
+
+.menu-section h2 {
+    font-family: 'Amiri', serif; /* خط أميري للعناوين الفرعية */
+    color: #a0522d; /* لون بني متوسط للعناوين الفرعية */
+    font-size: 2.5em;
+    margin-bottom: 35px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.menu-section h2 i {
+    margin-left: 15px;
+    color: #ffcc00; /* أيقونات ذهبية */
+}
+
+/* Underline effect for section titles */
+.menu-section h2::after {
+    content: '';
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 0;
+    width: 80px;
+    height: 4px;
+    background-color: #ffcc00; /* خط سفلي ذهبي */
+    border-radius: 5px;
+}
+
+/* Menu Items Grid */
+.menu-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+}
+
+.menu-item {
+    background-color: #fff9ed; /* خلفية أفتح قليلاً لعناصر المنيو */
+    border: 1px solid #ffe0b2; /* إطار بلون فاتح جداً */
+    border-radius: 18px; /* حواف أكثر استدارة */
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ffa000; /* إطار برتقالي/ذهبي حول الصورة */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item h3 {
+    font-family: 'Amiri', serif; /* خط أميري لأسماء الأصناف */
+    color: #5a2e0a; /* لون بني غامق لأسماء الأصناف */
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.menu-item p {
+    font-size: 1.05em;
+    color: #555;
+    margin-bottom: 20px;
+    min-height: 70px; /* لضمان ارتفاع متساوٍ للأوصاف */
+}
+
+.menu-item .price {
+    display: block;
+    font-size: 2em; /* حجم أكبر للسعر */
+    font-weight: bold;
+    color: #e84c3d; /* لون أحمر زاهي ومغري للسعر */
+    margin-top: 20px;
+    background-color: #ffe0b2; /* خلفية فاتحة للسعر */
+    padding: 10px 20px;
+    border-radius: 25px;
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.menu-footer {
+    background-color: #4a270d; /* لون بني غامق جداً للفوتر */
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+    font-size: 1em;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.menu-footer p {
+    margin: 8px 0;
+}
+
+.menu-footer a {
+    color: #ffdc00; /* روابط ذهبية في الفوتر */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu-footer a:hover {
+    color: #fff;
+}
+
+.menu-footer .fab {
+    font-size: 1.3em;
+    margin: 0 8px;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .menu-header h1 {
+        font-size: 2.8em;
+    }
+
+    .menu-header p {
+        font-size: 1em;
+    }
+
+    .menu-container {
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .menu-section h2 {
+        font-size: 2em;
+    }
+
+    .menu-items-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 25px;
+    }
+
+    .menu-item img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .menu-item h3 {
+        font-size: 1.5em;
+    }
+
+    .menu-item .price {
+        font-size: 1.8em;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-header h1 {
+        font-size: 2.2em;
+    }
+
+    .menu-items-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-item {
+        padding: 20px;
+    }
+
+    .menu-item img {
+        width: 120px;
+        height: 120px;
+    }
+}
